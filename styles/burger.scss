@@ -1,0 +1,483 @@
+@import 'variables';
+@import 'modüles';
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+// NAVBAR BAŞLANGIÇ
+
+.navbar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 50px;
+    
+    align-items: center;
+   @include back;
+
+    &-title{
+        font-size: 35px;
+        font-family: "Sour Gummy", sans-serif;
+        font-weight: 500;
+    }
+    &-title p{
+        color: red;
+        
+    }
+    &-title span{
+        color: orange;
+    }
+
+    &-menü{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-decoration: none;
+        margin-left: 60px;
+        gap: 30px;
+
+        a:nth-child(1){
+            color: red;
+        }
+
+        a:nth-child(2){
+            color: white;
+        }
+
+        a{
+            text-decoration: none;
+            font-size: 20px;
+        }
+    }
+    &-tel{
+    color: white;
+    font-size: 17px;
+    
+
+    
+    i{
+        color: black;
+        border: solid 1px white;
+        border-radius: 100%;
+        background-color: white;
+        padding: 4px;
+    }
+    i:hover{
+        transition: all .7s;
+        transform: scale(1.4);
+        color: rgb(194, 116, 6);
+        cursor: pointer;
+    }
+}
+}
+
+// NAVBAR BİTİŞ
+
+// BANNER BAŞLANGIÇ
+
+.banner{
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include back;
+    
+
+    &-left{
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+
+        button{
+            @include button
+        }
+
+        button:hover{
+            cursor: pointer;
+            transition: all .8s;
+            transform: scale(1.3);
+            
+        }
+
+        h3{
+            font-size: 30px;
+
+        }
+    }
+    &-middle{
+        
+        width: 33%;
+        position: relative;
+       
+
+        span{
+            position: absolute;
+            top: 10%;
+            right: 10%;
+           @include price;
+
+
+        }
+
+        img{
+            width: 100%;
+            
+
+         }
+         &:hover{
+            cursor: pointer;
+            transform: scale(1.2);
+         }
+      
+    }
+    &-right{
+        width: 33%;
+        text-align: end;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+
+        h3{
+            color: orange;
+            font-size: 35px;
+            font-weight: 600;
+        }
+        span{
+            font-size: 15px;
+            color: white;
+        }
+        
+    }
+}
+
+
+// BANNER BİTİŞ 
+
+// PRODUCT BAŞLANGIÇ
+
+.product{
+    
+    padding: 20px 50px;
+    border-top: 5px solid black;
+    gap: 15px;
+
+
+    &-title{
+    text-align: center;
+    }
+    & .k{
+        color: rgb(53, 53, 232);
+        font-size: 20px;
+        font-weight: 400;
+        font-family: "Sour Gummy", sans-serif;
+
+
+    }
+    & h3{
+        color: red;
+        font-size: 28px;
+        font-weight: 600;
+    }
+    &s{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 30px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        transform: all .8s;
+        :hover{
+            cursor: pointer;
+            transform: scale(1.05);
+            transform: all .8s;
+            
+        }
+
+       
+
+
+
+        &-card{
+            width: 280px;
+            text-align: center;
+            border-radius: 40px 40px 0px 0px;
+            box-shadow: 2px 2px 5px gray;
+
+            
+
+            
+            &-content{
+                display: flex;
+                justify-content: space-around;
+            }
+
+            &-order{
+                i{
+                   background-color: black;
+                   color: white;
+                   border-radius: 100%;
+                   padding: 3px 5px;
+                }
+
+                i:hover{
+                    transition: all .7s;
+                    transform: scale(1.4);
+                    color: rgb(194, 116, 6);
+                    cursor: pointer;
+                }
+                 button{
+                    @include button;
+                 }
+
+                 button:hover{
+                    cursor: pointer;
+                    transition: all .8s;
+                    transform: scale(1.3);
+                    
+                }
+            }
+            p{
+                margin: 10px 0;
+            }
+
+            span{
+                @include price;
+                font-size: 20px;
+                
+                
+            
+            }
+            
+        }
+
+         img{
+            width: 100%;
+            object-fit: contain;
+            background-color: red;
+            text-overflow: ellipsis;
+            border-radius: 40px 40px 0px 0px;
+            
+        } 
+
+        
+
+    }
+
+}
+
+// ORDER BAŞLANGIÇ
+
+.order{
+    display: flex;
+    padding: 50px 0;
+    width: 100%;
+    justify-content: center;
+    border-top: 5px solid black;
+    &-card{
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 2px 2px 9px black;
+        overflow-x: hidden;
+        transform: rotate(5deg);
+        
+
+
+
+        &-left{
+            background-color: red;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            width: 65%;
+            align-items: start;
+            gap: 5px;
+            padding: 0 0 10px 10px;
+
+            h3{
+                font-size: 20px;
+                color: white;
+
+            }
+            button{
+                @include button;
+                font-size: 14px;
+                background-color: orange;
+                transition: all .8s;
+               
+                 }
+                 button:hover{
+                    cursor: pointer;
+                    transform: scale(1.1);
+                    transition: all .8s;
+
+
+                 }
+
+
+
+
+
+        }
+        &-right{
+            width: 35%;
+            background-color: orange;
+
+
+            img{
+                width:300px;
+
+            }
+        }
+    }
+
+}
+
+// ORDER BİTİŞ
+
+// REKLAM BAŞLANGIÇ
+
+.reklam{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    border-top: 5px solid black;
+    padding: 20px;
+
+
+    
+
+    
+    width: 100%;
+
+    h1{
+        color: red;
+        padding: 10px 0 0 0;
+
+    }
+
+
+    &-card{
+        
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        align-items: center;
+        object-fit: cover;
+        width: 100%;
+
+        img{
+            width: 100px;
+            object-fit: cover;
+            
+
+
+        }
+
+        :hover{
+            cursor: pointer;
+
+
+        }
+
+
+    }
+
+
+}
+
+// FOOTER
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    border-top: 5px solid black;
+    padding-top: 10px;
+    padding: 20px 50px;
+
+
+
+    &-right{
+        
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+
+        .social{
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+            font-size: 25px;
+            
+
+            :hover{
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+
+        }
+        
+        p{
+            font-size: 35px;
+            font-weight: 600;
+            color: red;
+            font-family: "Sour Gummy", sans-serif;
+
+            span{
+                color: orange;
+            }
+        }
+
+        
+
+
+    }
+
+    &-left{
+        
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+
+
+        ul{
+            display: flex;
+           
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+            width: 100%;
+            list-style: none;
+
+            :nth-child(1){
+                font-weight: 700;
+            }
+            :hover{
+                color: red;
+                cursor: pointer;
+            }
+
+
+
+
+        }
+ 
+    }
+}
